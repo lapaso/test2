@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="s1"></div>
+
+<script>
+
+    document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/>init`
+
+    window.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/>loaded`
+    });
+
+    document.addEventListener("visibilitychange", function() {
+        document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/> Your page is  ${document.visibilityState}`
+    });
+
+</script>
+</body>
+</html>
