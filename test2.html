@@ -16,7 +16,7 @@
     });
 
     document.addEventListener("visibilitychange", function() {
-        document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/> Your page is  ${document.visibilityState}`
+        document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/> Your page is  ${document.visibilityState} ${JSON.stringify(new Date())}`
     });
 
 </script>
