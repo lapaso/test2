@@ -8,17 +8,21 @@
 <button onclick="A()">test link</button>
 
 <script>
+    let url = new URLSearchParams(location.search);
+    let s1='test';
+    if(url.has('s1')){
+        s1 =url.get('s1')
+    }
+
+    window.__link = "https://gettoyouraccountnow.com/go/offer?AID=C325432&id=Gcsb3YpWW6iwueWywLd7VooGf0tBJtaa6exufqz0&s1="+s1
     function A() {
         window.open('https://google.com', '_blank').focus();
-        let url = new URLSearchParams(location.search);
-        let s1='test';
-        if(url.has('s1')){
-            s1 =url.get('s1')
-        }
 
-        window.location.href="https://gettoyouraccountnow.com/go/offer?AID=C325432&id=Gcsb3YpWW6iwueWywLd7VooGf0tBJtaa6exufqz0&s1="+s1;
-        //console.log("https://gettoyouraccountnow.com/go/offer?AID=C325432&id=Gcsb3YpWW6iwueWywLd7VooGf0tBJtaa6exufqz0&s1="+s1);
+
+        window.location.href=__link;
     }
+    console.log(__link);
+
 </script>
 </body>
 </html>
