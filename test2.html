@@ -9,10 +9,10 @@
 
 <script>
 
-    document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/>init`
+    document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/>init  ${JSON.stringify(new Date())}`
 
     window.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/>loaded`
+        document.getElementById('s1').innerHTML=document.getElementById('s1').innerHTML +`<br/>loaded  ${JSON.stringify(new Date())}`
     });
 
     document.addEventListener("visibilitychange", function() {
